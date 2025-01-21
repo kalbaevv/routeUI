@@ -1,17 +1,23 @@
 import React from 'react';
 import styles from './Modal.module.css';
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 
-const Modal = ({ setIsModal, isModal,selectedItem }) => {
+const Modal = ({ setIsModal, isModal, selectedItem }) => {
     return (
         isModal && (
-            <div className={styles.modalBackdrop}>
-                <div className={styles.modalContainer}>
+            <div className={styles.modalBackdrop} onClick={() => setIsModal(false)}>
+                <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
                     <h2>{selectedItem.name}</h2>
-                    <p>длина:{selectedItem.length}</p>
-                    <p>сложность:{selectedItem.difficulty}</p>
-                    <p>описание:{selectedItem.description}</p>
-                    <Button variant="outlined" onClick={() => setIsModal(false)}>Close</Button>
+                    <p><strong>Длина:</strong> {selectedItem.length}</p>
+                    <p><strong>Сложность:</strong> {selectedItem.difficulty}</p>
+                    <p><strong>Описание:</strong> {selectedItem.description}</p>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => setIsModal(false)}
+                    >
+                        Закрыть
+                    </Button>
                 </div>
             </div>
         )
