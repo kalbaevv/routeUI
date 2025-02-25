@@ -1,0 +1,21 @@
+.route {
+    margin-top: 60px;
+}
+
+.route_name {
+   margin-bottom: 20px;
+}
+
+.route_destination {
+    display: flex;
+    gap: 20px;
+}
+
+.route_button {
+    margin-top: 20px;
+}
+
+.route_length {
+    display: flex;
+    gap: 20px;
+}
