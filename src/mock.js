@@ -35,3 +35,15 @@ export const routes = [
         description: "Прогулка вдоль реки с потрясающими видами и удобными местами для отдыха.",
     },
 ];
+
+
+export const dropDownData = [
+    { value: 10, label: "Джал" },
+    { value: 20, label: "Советская" },
+    { value: 30, label: "Проспект Мира" },
+];
+
+export const closestDropDownData = [
+    { value: true, label: "ближайший" },
+    { value: false, label: "дальший" },
+];

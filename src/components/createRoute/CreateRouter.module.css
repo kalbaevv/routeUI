@@ -1,5 +1,6 @@
 .route {
     margin-top: 60px;
+    max-width: 500px;
 }
 
 .route_name {
@@ -9,6 +10,7 @@
 .route_destination {
     display: flex;
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .route_button {

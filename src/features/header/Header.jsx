@@ -2,22 +2,14 @@ import React, { useState} from 'react';
 import DropDown from "../../components/dropDown/DropDown";
 import styles from "./Header.module.css";
 import { Button } from "@mui/material";
+import {closestDropDownData, dropDownData} from "../../mock";
 
 const Header = ({ setIsList, isList }) => {
     const [from, setFrom] = useState(null);
     const [to, setTo] = useState(null);
     const [closest, setClosest] = useState(null);
 
-    const dropDownData = [
-        { value: 10, label: "Джал" },
-        { value: 20, label: "Советская" },
-        { value: 30, label: "Проспект Мира" },
-    ];
 
-    const closestDropDownData = [
-        { value: true, label: "ближайший" },
-        { value: false, label: "дальший" },
-    ];
 
     const handleClick = () => {
             setIsList(!isList);
